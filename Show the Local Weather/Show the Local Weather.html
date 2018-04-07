@@ -1,45 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>聚合数据天气应用</title>
 </head>
+
 <body>
     <div class="container">
         <div class="row">
             <div class="col-xs-12 col-md-12">
                 <div>
                     <header class="text-center">
-                        <a href="https://www.juhe.cn"><img src="https://www.juhe.cn/themes/v5/public/images/loginlogo.png" alt="" class="img-responsive"></a>
+                        <a href="https://www.juhe.cn">
+                            <img src="https://www.juhe.cn/themes/v5/public/images/loginlogo.png" alt="" class="img-responsive">
+                        </a>
                         <h1>天气应用</h1>
                     </header>
                 </div>
                 <br>
                 <div>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
+                    <h3>
+                        城市：
+                        <span id="city"></span>
+                    </h3>
                 </div>
-                <div>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                </div>
-                <div>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
-                    <p></p>
+                <table class="table">
+                    <caption>当前实况天气</caption>
+                    <thead>
+                        <tr>
+                            <th>时间</th>
+                            <th>温度</th>
+                            <th>风向</th>
+                            <th>风力</th>
+                            <th>湿度</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="ntime"></td>
+                            <td id="ntemp"></td>
+                            <td id="nwindd"></td>
+                            <td id="nwinds"></td>
+                            <td id="nhumidity"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>日期</th>
+                                <th>星期</th>
+                                <th>温度</th>
+                                <th>天气</th>
+                                <th>风力</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td id="tdate"></td>
+                                <td id="tweek"></td>
+                                <td id="ttemp"></td>
+                                <td id="tweather"></td>
+                                <td id="twind"></td>
+                            </tr>
+                            <tr>
+                                <td id="fdate1"></td>
+                                <td id="fweek1"></td>
+                                <td id="ftemp1"></td>
+                                <td id="fwind1"></td>
+                                <td id="fwind1"></td>
+                            </tr>
+                            <tr>
+                                <td id="fdate2"></td>
+                                <td id="fweek2"></td>
+                                <td id="ftemp2"></td>
+                                <td id="fwind2"></td>
+                                <td id="fwind2"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
                 </div>
             </div>
         </div>
     </div>
 </body>
+
 </html>
