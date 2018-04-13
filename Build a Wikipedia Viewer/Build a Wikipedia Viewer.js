@@ -3,8 +3,8 @@ $(document).ready(function () {
 });
 
 function wikipediaViewerMain() {
-    var search = $('.search');
-    var result=$('.result');
+    var search = $('#search');
+    var result = $('#result');
     var randomUrl = 'https://en.wikipedia.org/wiki/Special:Random';
     var searchUrl = 'https://en.wikipedia.org/w/api.php';
     var searchValue = '';
