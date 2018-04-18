@@ -12,17 +12,24 @@ function getChannelInfo() {
         };
 
         $.getJSON(makeURL(channel), function (data) {
-            var stream=$.getJSON('https://api.twitch.tv/kraken/streams/'+data.streams[0]._id,function(date){return data.stream;});
+            var twitchChannel='https://api.twitch.tv/kraken/channels/'+channel;
+
             var game,status;
-            if(stream===null){
+
+            $.getJSON(twitchChannel).done(channel=>{
+                if(channeldata.status===404){
+                    game="Account Closed";
+                    status="offline";
+                }
+            });
+
+            //var stream=$.getJSON('https://api.twitch.tv/kraken/streams/'+data.streams[0]._id,function(date){return data.stream;});
+            
+            if(data.stream===null){
                 game="Offline";
                 status="offline";
             }
-            else if(stream===undefined){
-                game="Account Closed";
-                status="offline";
-            }
-            } else {
+            else {
                 game = data.streams[0].channel.game;
                 status = "online";
             }
