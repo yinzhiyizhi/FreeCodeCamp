@@ -23,7 +23,6 @@ function getChannelInfo() {
                 }
             });
 
-            //var stream=$.getJSON('https://api.twitch.tv/kraken/streams/'+data.streams[0]._id,function(date){return data.stream;});
             
             if(data.stream===null){
                 game="Offline";
