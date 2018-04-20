@@ -8,7 +8,7 @@ var client_Id = 'i4suuyjog3z5kawqo9ygt4d0p8a7ub';
 function getChannelInfo() {
     channels.forEach(function (channel) {
         function makeURL(name) {
-            return 'https://api.twitch.tv/kraken/streams/?client_id=' + client_Id + '&channel=' + name;
+            return 'https://api.twitch.tv/kraken/streams/?client_id=' + client_Id + '&channel=' + name+'&callback=?';
         };
 
         $.getJSON(makeURL(channel), function (data) {
