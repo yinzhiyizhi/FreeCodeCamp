@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pomodoro Clock</title>
+</head>
+
+<body>
+    <h1>Pomodoro Clock</h1>
+    <div class="set">
+        <div class="break">
+            <h4>Break Length</h4>
+            <button class="mius" id="break_mius">-</button>
+            <span class="br_time" id="break_time"></span>
+            <button class="plus" id="break_plus">+</button>
+        </div>
+        <div class="session">
+            <h4>Session Length</h4>
+            <button class="mius" id="session_mius">-</button>
+            <span class="se_time" id="session_time"></span>
+            <button class="plus" id="session_plus">+</button>
+        </div>
+    </div>
+
+    <div class="buttons">
+        <button class="reset" id="reset">Reset</button>
+        <button class="start" id="start">Start</button>
+    </div>
+
+    <div class="time">
+        <div>
+            <h3>Session</h3>
+            <span id="session_time_display"></span>
+        </div>
+        <div>
+            <h3>Break</h3>
+            <span id="break_time_display"></span>
+        </div>
+    </div>
+</body>
+
+</html>
