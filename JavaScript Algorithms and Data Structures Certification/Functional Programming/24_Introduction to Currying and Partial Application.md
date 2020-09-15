@@ -94,7 +94,7 @@ partialFn(10); // 返回 13
 ```js
 function add(x) {
   // Only change code below this line
-  
+
 
   // Only change code above this line
 }
@@ -104,11 +104,10 @@ add(10)(20)(30);
 
 # Answer
 ```js
-function checkPositive(arr) {
+function add(x) {
   // Only change code below this line
-  return arr.some(num => num > 0);
-
+  return y => z => x + y + z;
   // Only change code above this line
 }
-checkPositive([1, 2, 3, -4, 5]);
+add(10)(20)(30);
 ```
