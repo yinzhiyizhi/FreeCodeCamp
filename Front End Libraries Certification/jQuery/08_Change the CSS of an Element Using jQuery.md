@@ -1,39 +1,49 @@
-#  jQuery: Learn How Script Tags and Document Ready Work
-Now we're ready to learn jQuery, the most popular JavaScript tool of all time.
+# jQuery: Change the CSS of an Element Using jQuery
+We can also change the CSS of an HTML element directly with jQuery.
 
-Before we can start using jQuery, we need to add some things to our HTML.
+jQuery has a function called .css() that allows you to change the CSS of an element.
 
-First, add a script element at the top of your page. Be sure to close it on the following line.
+Here's how we would change its color to blue:
 
-Your browser will run any JavaScript inside a script element, including jQuery.
+$("#target1").css("color", "blue");
 
-Inside your script element, add this code: $(document).ready(function() { to your script. Then close it on the following line (still inside your script element) with: });
+This is slightly different from a normal CSS declaration, because the CSS property and its value are in quotes, and separated with a comma instead of a colon.
 
-We'll learn more about functions later. The important thing to know is that code you put inside this function will run as soon as your browser has loaded your page.
+Delete your jQuery selectors, leaving an empty document ready function.
 
-This is important because without your document ready function, your code may run before your HTML is rendered, which would cause bugs.
+Select target1 and change its color to red. 
 
 
 # 中文版本FCC
-jQuery：了解 Script 和 Document 是如何工作的
+jQuery：使用 jQuery 更改元素的 CSS
 
-现在我们已经准备好学习有史以来最受欢迎的 JavaScript 框架——jQuery 了。
+我们也能用 jQuery 直接改变 HTML 标签的 CSS。
 
-在使用 jQuery 之前，我们需要在 HTML 页面中添加一些东西。
+jQuery 有一个.css()方法，其能改变标签的 CSS。
 
-首先，在页面顶部添加script标签，记得在后面为script标签添加结束标签。
+下面的代码效果是把颜色变蓝：
 
-浏览器在script标签中运行所有的 JavaScript 脚本包括 jQuery。
+$("#target1").css("color", "blue");
 
-在script标签中添加代码$(document).ready(function() {。然后在后面（仍在该script标签内）用});闭合它。
+这与通常的 CSS 声明略有不同，因为这个 CSS 属性和它的值在英文引号里，并且它们用逗号而不是冒号间隔开。
 
-稍后我们将详细介绍functions，现在需要知道的是，只要浏览器加载页面，function中放入的代码就会运行。
+删除你的jQuery选择器，并留下空的document ready function。
 
-有一点很重要，如果没有document ready function，你的代码将在 HTML 页面呈现之前运行，这将导致错误。
+请选择target1并将其颜色变为红色（red）。
 
 
 # Question
 ```html
+<script>
+  $(document).ready(function() {
+    $("button").addClass("animated bounce");
+    $(".well").addClass("animated shake");
+    $("#target3").addClass("animated fadeOut");
+    $("button").removeClass("btn-default");
+
+  });
+</script>
+
 <!-- Only change code above this line -->
 
 <div class="container-fluid">
@@ -62,12 +72,14 @@ jQuery：了解 Script 和 Document 是如何工作的
 
 # Answer
 ```html
-<!-- Only change code above this line -->
 <script>
   $(document).ready(function() {
-
+    $("#target1").css("color", "red");
   });
 </script>
+
+<!-- Only change code above this line -->
+
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
   <div class="row">

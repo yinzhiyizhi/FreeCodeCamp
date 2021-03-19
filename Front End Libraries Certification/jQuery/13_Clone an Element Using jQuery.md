@@ -1,39 +1,45 @@
-#  jQuery: Learn How Script Tags and Document Ready Work
-Now we're ready to learn jQuery, the most popular JavaScript tool of all time.
+# jQuery: Clone an Element Using jQuery
+In addition to moving elements, you can also copy them from one place to another.
 
-Before we can start using jQuery, we need to add some things to our HTML.
+jQuery has a function called clone() that makes a copy of an element.
 
-First, add a script element at the top of your page. Be sure to close it on the following line.
+For example, if we wanted to copy target2 from our left-well to our right-well, we would use:
 
-Your browser will run any JavaScript inside a script element, including jQuery.
+$("#target2").clone().appendTo("#right-well");
 
-Inside your script element, add this code: $(document).ready(function() { to your script. Then close it on the following line (still inside your script element) with: });
+Did you notice this involves sticking two jQuery functions together? This is called function chaining and it's a convenient way to get things done with jQuery.
 
-We'll learn more about functions later. The important thing to know is that code you put inside this function will run as soon as your browser has loaded your page.
-
-This is important because without your document ready function, your code may run before your HTML is rendered, which would cause bugs.
+Clone your target5 element and append it to your left-well. 
 
 
 # 中文版本FCC
-jQuery：了解 Script 和 Document 是如何工作的
+jQuery：使用 jQuery 克隆元素
 
-现在我们已经准备好学习有史以来最受欢迎的 JavaScript 框架——jQuery 了。
+除了移动标签，也可以把元素从一个地方复制到另一地方。
 
-在使用 jQuery 之前，我们需要在 HTML 页面中添加一些东西。
+jQuery 有一个clone()方法，可以复制标签。
 
-首先，在页面顶部添加script标签，记得在后面为script标签添加结束标签。
+例如，如果想把target2从left-well复制到right-well，可以设置如下：
 
-浏览器在script标签中运行所有的 JavaScript 脚本包括 jQuery。
+$("#target2").clone().appendTo("#right-well");
 
-在script标签中添加代码$(document).ready(function() {。然后在后面（仍在该script标签内）用});闭合它。
+你是否注意到这两个 jQuery 方法连在一起了吗？这被称为链式调用（function chaining），是一种用 jQuery 实现效果的简便方法。
 
-稍后我们将详细介绍functions，现在需要知道的是，只要浏览器加载页面，function中放入的代码就会运行。
-
-有一点很重要，如果没有document ready function，你的代码将在 HTML 页面呈现之前运行，这将导致错误。
+克隆target5标签并附加到left-well。
 
 
 # Question
 ```html
+<script>
+  $(document).ready(function() {
+    $("#target1").css("color", "red");
+    $("#target1").prop("disabled", true);
+    $("#target4").remove();
+    $("#target2").appendTo("#right-well");
+
+  });
+</script>
+
 <!-- Only change code above this line -->
 
 <div class="container-fluid">
@@ -62,12 +68,18 @@ jQuery：了解 Script 和 Document 是如何工作的
 
 # Answer
 ```html
-<!-- Only change code above this line -->
 <script>
   $(document).ready(function() {
-
+    $("#target1").css("color", "red");
+    $("#target1").prop("disabled", true);
+    $("#target4").remove();
+    $("#target2").appendTo("#right-well");
+    $("#target5").clone().appendTo("#left-well");
   });
 </script>
+
+<!-- Only change code above this line -->
+
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
   <div class="row">

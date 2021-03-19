@@ -1,39 +1,45 @@
-#  jQuery: Learn How Script Tags and Document Ready Work
-Now we're ready to learn jQuery, the most popular JavaScript tool of all time.
+# jQuery: Target Elements by Class Using jQuery
+You see how we made all of your button elements bounce? We selected them with $("button"), then we added some CSS classes to them with .addClass("animated bounce");.
 
-Before we can start using jQuery, we need to add some things to our HTML.
+You just used jQuery's .addClass() function, which allows you to add classes to elements.
 
-First, add a script element at the top of your page. Be sure to close it on the following line.
+First, let's target your div elements with the class well by using the $(".well") selector.
 
-Your browser will run any JavaScript inside a script element, including jQuery.
+Note that, just like with CSS declarations, you type a . before the class's name.
 
-Inside your script element, add this code: $(document).ready(function() { to your script. Then close it on the following line (still inside your script element) with: });
+Then use jQuery's .addClass() function to add the classes animated and shake.
 
-We'll learn more about functions later. The important thing to know is that code you put inside this function will run as soon as your browser has loaded your page.
+For example, you could make all the elements with the class text-primary shake by adding the following to your document ready function:
 
-This is important because without your document ready function, your code may run before your HTML is rendered, which would cause bugs.
+$(".text-primary").addClass("animated shake"); 
 
 
 # 中文版本FCC
-jQuery：了解 Script 和 Document 是如何工作的
+jQuery：使用 jQuery 配合 class 选择器选择元素
 
-现在我们已经准备好学习有史以来最受欢迎的 JavaScript 框架——jQuery 了。
+我们如何使所有的button标签有弹性的动画效果？我们用$("button")选取所有的button标签，并用.addClass("animated bounce");给其添加一些 CSS 属性。
 
-在使用 jQuery 之前，我们需要在 HTML 页面中添加一些东西。
+jQuery 的.addClass()方法用来给标签添加类。
 
-首先，在页面顶部添加script标签，记得在后面为script标签添加结束标签。
+首先，我们使用$(".well")选取类为well的div标签。
 
-浏览器在script标签中运行所有的 JavaScript 脚本包括 jQuery。
+值得注意的是，和 CSS 声明一样，在类名前需要添加.。
 
-在script标签中添加代码$(document).ready(function() {。然后在后面（仍在该script标签内）用});闭合它。
+然后，用 jQuery 的.addClass()方法添加animated和shake类。
 
-稍后我们将详细介绍functions，现在需要知道的是，只要浏览器加载页面，function中放入的代码就会运行。
+例如，在document ready function中添加下面的代码，能使所有类为text-primary的标签抖动：
 
-有一点很重要，如果没有document ready function，你的代码将在 HTML 页面呈现之前运行，这将导致错误。
+$(".text-primary").addClass("animated shake");
 
 
 # Question
 ```html
+<script>
+  $(document).ready(function() {
+    $("button").addClass("animated bounce");
+  });
+</script>
+
 <!-- Only change code above this line -->
 
 <div class="container-fluid">
@@ -62,12 +68,15 @@ jQuery：了解 Script 和 Document 是如何工作的
 
 # Answer
 ```html
-<!-- Only change code above this line -->
 <script>
   $(document).ready(function() {
-
+    $("button").addClass("animated bounce");
+    $(".well").addClass("animated shake");
   });
 </script>
+
+<!-- Only change code above this line -->
+
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
   <div class="row">

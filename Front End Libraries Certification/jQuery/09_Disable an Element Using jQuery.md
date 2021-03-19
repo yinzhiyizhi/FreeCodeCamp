@@ -1,39 +1,42 @@
-#  jQuery: Learn How Script Tags and Document Ready Work
-Now we're ready to learn jQuery, the most popular JavaScript tool of all time.
+# jQuery: Disable an Element Using jQuery
+You can also change the non-CSS properties of HTML elements with jQuery. For example, you can disable buttons.
 
-Before we can start using jQuery, we need to add some things to our HTML.
+When you disable a button, it will become grayed-out and can no longer be clicked.
 
-First, add a script element at the top of your page. Be sure to close it on the following line.
+jQuery has a function called .prop() that allows you to adjust the properties of elements.
 
-Your browser will run any JavaScript inside a script element, including jQuery.
+Here's how you would disable all buttons:
 
-Inside your script element, add this code: $(document).ready(function() { to your script. Then close it on the following line (still inside your script element) with: });
+$("button").prop("disabled", true);
 
-We'll learn more about functions later. The important thing to know is that code you put inside this function will run as soon as your browser has loaded your page.
-
-This is important because without your document ready function, your code may run before your HTML is rendered, which would cause bugs.
+Disable only the target1 button. 
 
 
 # 中文版本FCC
-jQuery：了解 Script 和 Document 是如何工作的
+jQuery：使用 jQuery 禁用元素
 
-现在我们已经准备好学习有史以来最受欢迎的 JavaScript 框架——jQuery 了。
+你还能用 jQuery 改变 HTML 标签的非 CSS 属性,例如:能禁用按钮。
 
-在使用 jQuery 之前，我们需要在 HTML 页面中添加一些东西。
+当你禁用按钮时，它将变成灰色并无法点击。
 
-首先，在页面顶部添加script标签，记得在后面为script标签添加结束标签。
+jQuery 有一个.prop()方法，你可以用其调整标签的属性。
 
-浏览器在script标签中运行所有的 JavaScript 脚本包括 jQuery。
+下面的代码效果是禁用所有的按钮：
 
-在script标签中添加代码$(document).ready(function() {。然后在后面（仍在该script标签内）用});闭合它。
+$("button").prop("disabled", true);
 
-稍后我们将详细介绍functions，现在需要知道的是，只要浏览器加载页面，function中放入的代码就会运行。
-
-有一点很重要，如果没有document ready function，你的代码将在 HTML 页面呈现之前运行，这将导致错误。
+请仅禁用target1按钮。
 
 
 # Question
 ```html
+<script>
+  $(document).ready(function() {
+    $("#target1").css("color", "red");
+
+  });
+</script>
+
 <!-- Only change code above this line -->
 
 <div class="container-fluid">
@@ -62,12 +65,15 @@ jQuery：了解 Script 和 Document 是如何工作的
 
 # Answer
 ```html
-<!-- Only change code above this line -->
 <script>
   $(document).ready(function() {
-
+    $("#target1").css("color", "red");
+    $("#target1").prop("disabled", true);
   });
 </script>
+
+<!-- Only change code above this line -->
+
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
   <div class="row">

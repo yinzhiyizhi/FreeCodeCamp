@@ -1,39 +1,41 @@
-#  jQuery: Learn How Script Tags and Document Ready Work
-Now we're ready to learn jQuery, the most popular JavaScript tool of all time.
+# jQuery: Target HTML Elements with Selectors Using jQuery
+Now we have a document ready function.
 
-Before we can start using jQuery, we need to add some things to our HTML.
+Now let's write our first jQuery statement. All jQuery functions start with a $, usually referred to as a dollar sign operator, or as bling.
 
-First, add a script element at the top of your page. Be sure to close it on the following line.
+jQuery often selects an HTML element with a selector, then does something to that element.
 
-Your browser will run any JavaScript inside a script element, including jQuery.
+For example, let's make all of your button elements bounce. Just add this code inside your document ready function:
 
-Inside your script element, add this code: $(document).ready(function() { to your script. Then close it on the following line (still inside your script element) with: });
+$("button").addClass("animated bounce");
 
-We'll learn more about functions later. The important thing to know is that code you put inside this function will run as soon as your browser has loaded your page.
-
-This is important because without your document ready function, your code may run before your HTML is rendered, which would cause bugs.
+Note that we've already included both the jQuery library and the Animate.css library in the background so that you can use them in the editor. So you are using jQuery to apply the Animate.css bounce class to your button elements. 
 
 
 # 中文版本FCC
-jQuery：了解 Script 和 Document 是如何工作的
+jQuery：使用 jQuery 配合元素选择器选择元素
 
-现在我们已经准备好学习有史以来最受欢迎的 JavaScript 框架——jQuery 了。
+接下来我们学习document ready function。
 
-在使用 jQuery 之前，我们需要在 HTML 页面中添加一些东西。
+首先，我们完成第一个 jQuery 语句。所有的 jQuery 函数以$开头，这个符号通常被称为美元符号（dollar sign operator）或bling。
 
-首先，在页面顶部添加script标签，记得在后面为script标签添加结束标签。
+jQuery 通常选取并操作带有选择器（selector）的 HTML 标签。
 
-浏览器在script标签中运行所有的 JavaScript 脚本包括 jQuery。
+例如，如果要所有button有弹性的动画效果，只需在document ready function中添加如下代码即可：
 
-在script标签中添加代码$(document).ready(function() {。然后在后面（仍在该script标签内）用});闭合它。
+$("button").addClass("animated bounce");
 
-稍后我们将详细介绍functions，现在需要知道的是，只要浏览器加载页面，function中放入的代码就会运行。
-
-有一点很重要，如果没有document ready function，你的代码将在 HTML 页面呈现之前运行，这将导致错误。
+请注意，为了能在编辑器里直接使用，我们已经为你在后台引入了 jQuery 库和 Animate.css 库。因此，你只需要通过 jQuery 给button元素添加bounce类就可以了。
 
 
 # Question
 ```html
+<script>
+  $(document).ready(function() {
+
+  });
+</script>
+
 <!-- Only change code above this line -->
 
 <div class="container-fluid">
@@ -62,12 +64,14 @@ jQuery：了解 Script 和 Document 是如何工作的
 
 # Answer
 ```html
-<!-- Only change code above this line -->
 <script>
   $(document).ready(function() {
-
+    $("button").addClass("animated bounce");
   });
 </script>
+
+<!-- Only change code above this line -->
+
 <div class="container-fluid">
   <h3 class="text-primary text-center">jQuery Playground</h3>
   <div class="row">
