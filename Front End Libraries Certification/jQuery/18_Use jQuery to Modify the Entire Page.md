@@ -1,27 +1,24 @@
-# jQuery: Target Even Elements Using jQuery
-You can also target elements based on their positions using :odd or :even selectors.
+# Use jQuery to Modify the Entire Page 
+We're done playing with our jQuery playground. Let's tear it down!
 
-Note that jQuery is zero-indexed which means the first element in a selection has a position of 0. This can be a little confusing as, counter-intuitively, :odd selects the second element (position 1), fourth element (position 3), and so on.
+jQuery can target the body element as well.
 
-Here's how you would target all the odd elements with class target and give them classes:
+Here's how we would make the entire body fade out: $("body").addClass("animated fadeOut");
 
-$(".target:odd").addClass("animated shake");
+But let's do something more dramatic. Add the classes animated and hinge to your body element.
 
-Try selecting all the even target elements and giving them the classes of animated and shake. Remember that even refers to the position of elements with a zero-based system in mind. 
 
 
 # 中文版本FCC
-jQuery：使用 jQuery 选择偶数元素
+jQuery：使用 jQuery 修改整个页面
 
-你也可以用基于位置的:odd和:even选择器选取标签。
+jQuery 的学习到这里就告一段落了，现在我们来试一试让元素消失的特效。
 
-注意，jQuery 是零索引（zero-indexed）的，这意味着第 1 个标签的位置编号是0。这有点混乱和反常——:odd表示选择第 2 个标签（位置编号 1），第 4 个标签（位置编号 3）……等等，以此类推。
+jQuery 也能选取body标签。
 
-下面的代码展示了选取所有的奇标签并设置类：
+后面的代码效果是使整个body标签淡出： $("body").addClass("animated fadeOut");
 
-$(".target:odd").addClass("animated shake");
-
-请尝试选取所有target标签的偶标签并给他们设置animated和shake类。要考虑到偶（even）指的是标签位置编号基于0的系统。
+接下来我们做一些更有戏剧性的事：给body标签添加animated和hinge类。
 
 
 # Question
@@ -37,6 +34,7 @@ $(".target:odd").addClass("animated shake");
     $("#right-well").children().css("color", "orange");
     $("#left-well").children().css("color", "green");
     $(".target:nth-child(2)").addClass("animated bounce");
+    $(".target:even").addClass("animated shake");
 
   });
 </script>
@@ -80,7 +78,8 @@ $(".target:odd").addClass("animated shake");
     $("#right-well").children().css("color", "orange");
     $("#left-well").children().css("color", "green");
     $(".target:nth-child(2)").addClass("animated bounce");
-    $(".target:even").addClass("animates shake");
+    $(".target:even").addClass("animated shake");
+    $("body").addClass("animated hinge");
   });
 </script>
 
@@ -108,4 +107,3 @@ $(".target:odd").addClass("animated shake");
   </div>
 </div>
 ```
-
